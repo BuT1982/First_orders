@@ -1,0 +1,15 @@
+{% extends 'orders/base.html' %}
+
+{% block content %}
+    <ul class="list-articles">
+        {% for post in orders %}
+            <li><h2> {{ post.title }} </h2>
+                <p> {{ post.description }} </p>
+                <p> {{ post.actors }} </p>
+                <p> Заявка создана - {{ post.created_at }} </p>
+            <div class="clear"></div>
+            <p class="link-read-post"><a href="#"> Открыть заявку </a> </p>
+            </li>
+        {% endfor %}
+    </ul>
+{% endblock %}
